@@ -1,0 +1,376 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+
+    android:background="#FFFFFF"
+    >
+
+    <ImageView
+
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:scaleType="fitXY"
+        android:src="@drawable/menupic" />
+
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/profile_image"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+
+            android:layout_centerVertical="true"
+        android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+
+            app:civ_border_color="#FF000000" />
+
+
+        <TextView
+            android:layout_gravity="center"
+            android:textSize="25dp"
+            android:textColor="@color/b10"
+            android:gravity="center"
+            android:id="@+id/personal"
+
+            app:fontFamily="@font/iran"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+        </TextView>
+    </LinearLayout>
+
+
+<LinearLayout
+    android:gravity="center"
+    android:layout_marginTop="-25dp"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+    android:layout_margin="8dp"
+        android:gravity="center"
+        android:padding="0dp"
+
+        android:orientation="vertical">
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/ahkamm"
+            android:layout_width="95dp"
+            android:layout_height="95dp"
+            android:layout_marginTop="20dp"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            app:lottie_rawRes="@raw/ahkammmm" />
+
+        <TextView
+            android:id="@+id/ahkam"
+            app:fontFamily="@font/iran"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-10dp"
+            android:gravity="center"
+            android:text="احکام"
+            android:textColor="@color/b10"
+            android:textSize="15dp">
+
+        </TextView>
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/tashvigatt"
+            android:layout_width="95dp"
+            android:layout_height="95dp"
+            android:layout_marginTop="10dp"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            app:lottie_rawRes="@raw/winner" />
+
+        <TextView
+            android:id="@+id/tashvigat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-10dp"
+            android:gravity="center"
+            android:text="تشویقات"
+            android:textColor="@color/b10"
+            android:textSize="15dp"
+            app:fontFamily="@font/iran">
+
+        </TextView>
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/tanbihh"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:layout_marginTop="10dp"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            app:lottie_rawRes="@raw/tanbih" />
+
+        <TextView
+            android:id="@+id/tanbih"
+            app:fontFamily="@font/iran"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-10dp"
+            android:gravity="center"
+            android:text="تنبیهات"
+            android:textColor="@color/b10"
+            android:textSize="15dp">
+
+        </TextView>
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/shenasnamee"
+            android:layout_width="95dp"
+            android:layout_height="95dp"
+            android:layout_marginTop="10dp"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            app:lottie_rawRes="@raw/shenasnamee" />
+
+        <TextView
+            android:id="@+id/shenasname"
+            app:fontFamily="@font/iran"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-10dp"
+            android:gravity="center"
+            android:text="اطلاعات شناسنامه"
+            android:textColor="@color/b10"
+            android:textSize="15dp">
+
+        </TextView>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_margin="8dp"
+        android:gravity="center"
+        android:padding="0dp"
+
+        android:orientation="vertical">
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/khabarr"
+            android:layout_width="95dp"
+            android:layout_height="95dp"
+            android:layout_marginTop="20dp"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            app:lottie_rawRes="@raw/alert" />
+
+        <TextView
+            android:id="@+id/khabar"
+            app:fontFamily="@font/iran"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-10dp"
+            android:gravity="center"
+            android:text="اطلاعیه ها"
+            android:textColor="@color/b10"
+            android:textSize="15dp">
+
+        </TextView>
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/etelaatt"
+            android:layout_width="95dp"
+            android:layout_height="95dp"
+            android:layout_marginTop="10dp"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            app:lottie_rawRes="@raw/data" />
+
+        <TextView
+            android:id="@+id/etelaat"
+            app:fontFamily="@font/iran"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-10dp"
+            android:gravity="center"
+            android:text="اطلاعات سازمانی"
+            android:textColor="@color/b10"
+            android:textSize="15dp">
+
+        </TextView>
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/tikett"
+            android:layout_width="95dp"
+            android:layout_height="95dp"
+            android:layout_marginTop="10dp"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            app:lottie_rawRes="@raw/mess" />
+
+        <TextView
+            android:id="@+id/tiket"
+            app:fontFamily="@font/iran"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-10dp"
+            android:gravity="center"
+            android:text="ارتباط باما"
+            android:textColor="@color/b10"
+            android:textSize="15dp">
+
+        </TextView>
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/updatee"
+            android:layout_width="95dp"
+            android:layout_height="95dp"
+            android:layout_marginTop="10dp"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            app:lottie_rawRes="@raw/uppp" />
+
+        <TextView
+            android:id="@+id/update"
+            app:fontFamily="@font/iran"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-10dp"
+            android:gravity="center"
+            android:text="بروزرسانی برنامه"
+            android:textColor="@color/b10"
+            android:textSize="15dp">
+
+        </TextView>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+       android:layout_margin="8dp"
+        android:gravity="center"
+        android:padding="0dp"
+
+        android:orientation="vertical">
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/amozeshh"
+            android:layout_width="95dp"
+            android:layout_height="95dp"
+            android:layout_marginTop="20dp"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            app:lottie_rawRes="@raw/amozesh" />
+
+        <TextView
+            android:id="@+id/amozesh"
+            app:fontFamily="@font/iran"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-10dp"
+            android:gravity="center"
+            android:text="سوابق آموزشی"
+            android:textColor="@color/b10"
+            android:textSize="15dp">
+
+        </TextView>
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/takafoll"
+            android:layout_width="95dp"
+            android:layout_height="95dp"
+            android:layout_marginTop="10dp"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            app:lottie_rawRes="@raw/family" />
+
+        <TextView
+            android:id="@+id/takafol"
+            app:fontFamily="@font/iran"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-10dp"
+            android:gravity="center"
+            android:text="افراد تحت تکفل"
+            android:textColor="@color/b10"
+            android:textSize="15dp">
+
+        </TextView>
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/renamee"
+            android:layout_width="95dp"
+            android:layout_height="95dp"
+            android:layout_marginTop="10dp"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            app:lottie_rawRes="@raw/ears" />
+
+        <TextView
+            android:id="@+id/rename"
+            app:fontFamily="@font/iran"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-10dp"
+            android:gravity="center"
+            android:text="اصلاحیه اطلاعات"
+            android:textColor="@color/b10"
+            android:textSize="15dp">
+
+        </TextView>
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/aboutt"
+            android:layout_width="95dp"
+            android:layout_height="95dp"
+            android:layout_marginTop="10dp"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            app:lottie_rawRes="@raw/aboutt" />
+
+        <TextView
+            android:id="@+id/about"
+            app:fontFamily="@font/iran"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-10dp"
+            android:gravity="center"
+            android:text="درباره برنامه"
+            android:textColor="@color/b10"
+            android:textSize="15dp">
+
+        </TextView>
+    </LinearLayout>-
+</LinearLayout>
+</LinearLayout>
+
+
+
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/exitee"
+        app:fontFamily="@font/iran"
+        android:text="خروج"
+        android:drawableRight="@drawable/ic_baseline_close_24"
+        android:background="@null"
+        android:drawablePadding="10dp"
+        android:textSize="20dp"
+        android:textColor="@color/white"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
+        >
+
+
+    </TextView>
+
+
+
+</RelativeLayout>
