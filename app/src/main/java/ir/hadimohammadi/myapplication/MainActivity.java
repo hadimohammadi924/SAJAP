@@ -45,6 +45,7 @@ public class MainActivity extends AppCompatActivity {
 String changegradl="hh";
 //hhhhhhhhhh
         //fffffff
+        /////yyyyyy
         ahkam = findViewById(R.id.ahkam);
         tashvigat = findViewById(R.id.tashvigat);
         tanbih = findViewById(R.id.tanbih);
