@@ -44,6 +44,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 String hadi="hhhhhhh";
 
+String hoda="sssss";
+
         ahkam = findViewById(R.id.ahkam);
         tashvigat = findViewById(R.id.tashvigat);
         tanbih = findViewById(R.id.tanbih);
