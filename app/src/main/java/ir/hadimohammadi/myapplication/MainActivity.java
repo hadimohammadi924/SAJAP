@@ -44,6 +44,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 String changegradl="hh";
 //hhhhhhhhhh
+        //fffffff
         ahkam = findViewById(R.id.ahkam);
         tashvigat = findViewById(R.id.tashvigat);
         tanbih = findViewById(R.id.tanbih);
