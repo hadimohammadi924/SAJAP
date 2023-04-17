@@ -33,18 +33,20 @@ public class MainActivity extends AppCompatActivity {
 
     SharedPreferences sp;
     SharedPreferences.Editor editor;
-    TextView ahkam,  tashvigat, tanbih, shenasname, khabar, etelaat, tiket,update, exitee,personal,amozesh,takafol,about,rename,texxt;
-    LottieAnimationView ahkamm,tanbihh,shenasnamee,khabarr,etelaatt,tikett,updatee,amozeshh,takafoll,aboutt,renamee,tashvigatt;
+    TextView ahkam, tashvigat, tanbih, shenasname, khabar, etelaat, tiket, update, exitee, personal, amozesh, takafol, about, rename, texxt;
+    LottieAnimationView ahkamm, tanbihh, shenasnamee, khabarr, etelaatt, tikett, updatee, amozeshh, takafoll, aboutt, renamee, tashvigatt;
     ImageView image;
     de.hdodenhof.circleimageview.CircleImageView profile_image;
+
     @Override
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-String hadi="hhhhhhh";
+        String hadi = "hhhhhhh";
+        String hadiiii = "hhhhhhh";
 
-String hoda="sssss";
+        String hoda = "sssss";
 
         ahkam = findViewById(R.id.ahkam);
         tashvigat = findViewById(R.id.tashvigat);
@@ -62,7 +64,7 @@ String hoda="sssss";
         tikett = findViewById(R.id.tikett);
         updatee = findViewById(R.id.updatee);
         exitee = findViewById(R.id.exitee);
-       // image = findViewById(R.id.image);
+        // image = findViewById(R.id.image);
         personal = findViewById(R.id.personal);
         profile_image = findViewById(R.id.profile_image);
         amozeshh = findViewById(R.id.amozeshh);
@@ -75,12 +77,6 @@ String hoda="sssss";
         rename = findViewById(R.id.rename);
         tashvigatt = findViewById(R.id.tashvigatt);
         tashvigat = findViewById(R.id.tashvigat);
-
-
-
-
-
-
 
 
         sp = getApplicationContext().getSharedPreferences("SAJAP", Context.MODE_PRIVATE);
@@ -100,7 +96,7 @@ String hoda="sssss";
                 System.exit(1);
             }
         });
-      //  Toast.makeText(this, sp.getString("pic",""), Toast.LENGTH_SHORT).show();
+        //  Toast.makeText(this, sp.getString("pic",""), Toast.LENGTH_SHORT).show();
         Glide
                 .with(MainActivity.this)
                 .load(sp.getString("image", ""))
@@ -108,15 +104,7 @@ String hoda="sssss";
 
                 .into(profile_image);
 
-          personal.setText(sp.getString("Users_Name", "")+" "+sp.getString("Users_FName", ""));
-
-
-
-
-
-
-
-
+        personal.setText(sp.getString("Users_Name", "") + " " + sp.getString("Users_FName", ""));
 
 
     }
@@ -129,12 +117,6 @@ String hoda="sssss";
         android.os.Process.killProcess(android.os.Process.myPid());
         System.exit(1);
     }
-
-
-
-
-
-
 
 
 }
