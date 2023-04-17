@@ -42,10 +42,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-String changegradl="hh";
-//hhhhhhhhhh
-        //fffffff
-        /////yyyyyy
+
         ahkam = findViewById(R.id.ahkam);
         tashvigat = findViewById(R.id.tashvigat);
         tanbih = findViewById(R.id.tanbih);
