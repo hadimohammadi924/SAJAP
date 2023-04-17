@@ -45,6 +45,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         String hadi = "hhhhhhh";
         String hadiiii = "hhhhhhh";
+        String hadiiiyyyi = "hhhhhhh";
 
         String hoda = "sssss";
 
