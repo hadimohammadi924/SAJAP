@@ -76,10 +76,6 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-
-
-
-
         sp = getApplicationContext().getSharedPreferences("SAJAP", Context.MODE_PRIVATE);
         Toast.makeText(this, "کاربر عزیز " + sp.getString("Users_Name", "").toString() + " " + sp.getString("Users_FName", "") + " خوش آمدید", Toast.LENGTH_SHORT).show();
         // editor = sp.edit();
@@ -107,12 +103,78 @@ public class MainActivity extends AppCompatActivity {
 
           personal.setText(sp.getString("Users_Name", "")+" "+sp.getString("Users_FName", ""));
 
-
-
-
-
-
-
+        ahkamm.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(MainActivity.this, "ahkam", Toast.LENGTH_SHORT).show();
+            }
+        });
+        tashvigatt.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(MainActivity.this, "tashvigat", Toast.LENGTH_SHORT).show();
+            }
+        });
+        tanbihh.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(MainActivity.this, "tanbih", Toast.LENGTH_SHORT).show();
+            }
+        });
+        shenasnamee.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(MainActivity.this, "shenasname", Toast.LENGTH_SHORT).show();
+            }
+        });
+        khabarr.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(MainActivity.this, "khabarr", Toast.LENGTH_SHORT).show();
+            }
+        });
+        tikett.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(MainActivity.this, "tikett", Toast.LENGTH_SHORT).show();
+            }
+        });
+        updatee.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(MainActivity.this, "updatee", Toast.LENGTH_SHORT).show();
+            }
+        });
+        etelaatt.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(MainActivity.this, "etelaat", Toast.LENGTH_SHORT).show();
+            }
+        });
+        renamee.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(MainActivity.this, "renamee", Toast.LENGTH_SHORT).show();
+            }
+        });
+        amozeshh.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(MainActivity.this, "amozaesh", Toast.LENGTH_SHORT).show();
+            }
+        });
+        takafoll.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(MainActivity.this, "takafoll", Toast.LENGTH_SHORT).show();
+            }
+        });
+        aboutt.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(MainActivity.this, "about", Toast.LENGTH_SHORT).show();
+            }
+        });
 
 
 
