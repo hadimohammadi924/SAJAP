@@ -98,7 +98,7 @@ public class MainActivity extends AppCompatActivity {
                 System.exit(1);
             }
         });
-      //  Toast.makeText(this, sp.getString("pic",""), Toast.LENGTH_SHORT).show();
+
         Glide
                 .with(MainActivity.this)
                 .load(sp.getString("image", ""))
@@ -203,7 +203,7 @@ public class MainActivity extends AppCompatActivity {
         requestQueue = new RequestQueue(cache, network);
         requestQueue.start();
 
-//pdate
+
         String url = "https://pgtab.info/Home/getv?id_V=" + id_V;
 
 
@@ -218,7 +218,7 @@ public class MainActivity extends AppCompatActivity {
 
                             if (Status.equals("true")) {
 
-                                //    Toast.makeText(sabte_response.this, "تغیرات لحاظ شد", Toast.LENGTH_SHORT).show();
+
                             } else {
                                 finish();
                                 startActivity(new Intent(MainActivity.this, update.class));
@@ -232,7 +232,7 @@ public class MainActivity extends AppCompatActivity {
                 new Response.ErrorListener() {
                     @Override
                     public void onErrorResponse(VolleyError error) {
-                        // Toast.makeText(sabte_response.this, "نمیشه نمیدونم چرا", Toast.LENGTH_SHORT).show();
+
                     }
                 });
         requestQueue.add(stringRequest);
