@@ -27,6 +27,9 @@ import com.android.volley.toolbox.HurlStack;
 import com.android.volley.toolbox.StringRequest;
 import com.bumptech.glide.Glide;
 
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import de.hdodenhof.circleimageview.CircleImageView;
 
 public class MainActivity extends AppCompatActivity {
@@ -37,6 +40,7 @@ public class MainActivity extends AppCompatActivity {
     LottieAnimationView ahkamm,tanbihh,shenasnamee,khabarr,etelaatt,tikett,updatee,amozeshh,takafoll,aboutt,renamee,tashvigatt;
     ImageView image;
     de.hdodenhof.circleimageview.CircleImageView profile_image;
+    String hh, version;
     @Override
 
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,7 +58,7 @@ public class MainActivity extends AppCompatActivity {
         ahkamm = findViewById(R.id.ahkamm);
         tanbihh = findViewById(R.id.tanbihh);
         shenasnamee = findViewById(R.id.shenasnamee);
-        khabarr = findViewById(R.id.khabarr);
+       khabarr = findViewById(R.id.khabarr);
         etelaatt = findViewById(R.id.etelaatt);
         tikett = findViewById(R.id.tikett);
         updatee = findViewById(R.id.updatee);
@@ -73,8 +77,9 @@ public class MainActivity extends AppCompatActivity {
         tashvigatt = findViewById(R.id.tashvigatt);
         tashvigat = findViewById(R.id.tashvigat);
 
-
-
+        version = "3";
+        int Versionn = Integer.parseInt(version);
+        chekVersion(Versionn);
 
         sp = getApplicationContext().getSharedPreferences("SAJAP", Context.MODE_PRIVATE);
         Toast.makeText(this, "کاربر عزیز " + sp.getString("Users_Name", "").toString() + " " + sp.getString("Users_FName", "") + " خوش آمدید", Toast.LENGTH_SHORT).show();
@@ -190,7 +195,48 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
+    public void chekVersion(int id_V) {
 
+        RequestQueue requestQueue;
+        Cache cache = new DiskBasedCache(getCacheDir(), 1024 * 1024); // 1MB cap
+        Network network = new BasicNetwork(new HurlStack());
+        requestQueue = new RequestQueue(cache, network);
+        requestQueue.start();
+
+
+        String url = "https://pgtab.info/Home/getv?id_V=" + id_V;
+
+
+        StringRequest stringRequest = new StringRequest(Request.Method.GET, url,
+                new com.android.volley.Response.Listener<String>() {
+                    @Override
+                    public void onResponse(String response) {
+                        try {
+                            JSONObject respo = new JSONObject(response);
+                            String Status = respo.getString("v_now");
+
+
+                            if (Status.equals("true")) {
+
+                                //    Toast.makeText(sabte_response.this, "تغیرات لحاظ شد", Toast.LENGTH_SHORT).show();
+                            } else {
+                                finish();
+                                startActivity(new Intent(MainActivity.this, update.class));
+                            }
+
+                        } catch (JSONException e) {
+                            e.printStackTrace();
+                        }
+                    }
+                },
+                new Response.ErrorListener() {
+                    @Override
+                    public void onErrorResponse(VolleyError error) {
+                        // Toast.makeText(sabte_response.this, "نمیشه نمیدونم چرا", Toast.LENGTH_SHORT).show();
+                    }
+                });
+        requestQueue.add(stringRequest);
+    }
 
 
 

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:gravity="center"
+    android:layout_height="match_parent"
+    tools:context=".update">
+<LinearLayout
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@drawable/menupic"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+
+    <TextView
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textAlignment="center"
+        android:textSize="20dp"
+        app:fontFamily="@font/iran"
+        android:id="@+id/updatetext"
+        android:text="بروز رسانی نماید."
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+    </TextView>
+
+    <TextView
+        android:gravity="center"
+        android:layout_marginTop="25sp"
+        android:textColor="@color/white"
+        android:textAlignment="center"
+        android:textSize="20dp"
+        app:fontFamily="@font/iran"
+        android:id="@+id/now_version"
+        android:text="نسخه فعلی نصب شده در گوشی شما:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+    </TextView>
+
+    <TextView
+        android:gravity="center"
+        app:fontFamily="@font/iran"
+        android:textColor="@color/white"
+        android:textAlignment="center"
+        android:textSize="20dp"
+        android:id="@+id/updateVersion"
+        android:text="بروز رسانی نماید."
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+    </TextView>
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/updateee"
+        android:layout_width="95dp"
+        android:layout_height="95dp"
+        android:layout_marginTop="10dp"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/uppp" />
+
+    <TextView
+        android:id="@+id/updated"
+        app:fontFamily="@font/iran"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-10dp"
+        android:gravity="center"
+        android:text="بروزرسانی برنامه"
+        android:textColor="@color/b10"
+        android:textSize="15dp"></TextView>
+
+    <Button
+        android:id="@+id/exitt"
+        app:fontFamily="@font/iran"
+        android:layout_margin="50dp"
+        android:text="خروج"
+        android:textSize="15sp"
+        android:drawableRight="@drawable/ic_baseline_close_24"
+        android:background="@null"
+        android:textColor="@color/white"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+    </Button>
+
+</LinearLayout>
+</RelativeLayout>
