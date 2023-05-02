@@ -116,12 +116,13 @@ public class update extends AppCompatActivity {
                                 updatetext.setText("برنامه شما بروز است.");
                                 updateee.setVisibility(View.INVISIBLE);
                                 updated.setVisibility(View.INVISIBLE);
+                                exitt.setVisibility(View.INVISIBLE);
                                 now_version.setText("نسخه فعلی برنامه نصب شده در گوشی شما: " + respo.getString("V_v"));
                                 updateVersion.setText("ورژن بروز آماده بارگیری: " + respo.getString("xx1"));
                             } else {
                                 updatetext.setText(respo.getString("date"));
                                 mainpage.setVisibility(View.GONE);
-                                now_version.setText("نسخه فعلی برنامه نصب شده در گوشی شما: " + respo.getString("V_v"));
+                                now_version.setText("نسخه فعلی برنامه  در گوشی شما: " + respo.getString("V_v"));
                                 updateVersion.setText("ورژن بروز آماده بارگیری: " + respo.getString("xx1"));
                             }
 
