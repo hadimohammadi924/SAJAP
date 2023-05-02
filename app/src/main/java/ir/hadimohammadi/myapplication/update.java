@@ -29,9 +29,10 @@ import org.json.JSONObject;
 public class update extends AppCompatActivity {
 
     int version2;
-    Button updatee, exitt;
-    TextView updateVersion, now_version, updatetext,updated;
+    Button updatee, exitt, mainpage;
+    TextView updateVersion, now_version, updatetext, updated;
     LottieAnimationView updateee;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -75,9 +76,6 @@ public class update extends AppCompatActivity {
         });
 
 
-
-
-
         exitt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -86,7 +84,12 @@ public class update extends AppCompatActivity {
                 System.exit(1);
             }
         });
-
+        mainpage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(update.this, MainActivity.class));
+            }
+        });
     }
 
     public void chekVersion(int version2) {
@@ -108,10 +111,17 @@ public class update extends AppCompatActivity {
                         try {
                             JSONObject respo = new JSONObject(response);
                             String Status = respo.getString("v_now");
-                            updatetext.setText(respo.getString("date"));
-                            now_version.setText("نسخه فعلی برنامه نصب شده در گوشی شما: " + respo.getString("V_v"));
-                            updateVersion.setText("ورژن بروز آماده بارگیری: " + respo.getString("xx1"));
+                            if (Status.equals("true")) {
+                                updatetext.setText("برنامه شما بروز است.");
 
+                                now_version.setText("نسخه فعلی برنامه نصب شده در گوشی شما: " + respo.getString("V_v"));
+                                updateVersion.setText("ورژن بروز آماده بارگیری: " + respo.getString("xx1"));
+                            } else {
+                                updatetext.setText(respo.getString("date"));
+                                mainpage.setVisibility(View.GONE);
+                                now_version.setText("نسخه فعلی برنامه نصب شده در گوشی شما: " + respo.getString("V_v"));
+                                updateVersion.setText("ورژن بروز آماده بارگیری: " + respo.getString("xx1"));
+                            }
 
                         } catch (JSONException e) {
                             e.printStackTrace();
@@ -135,11 +145,7 @@ public class update extends AppCompatActivity {
         exitt = findViewById(R.id.exitt);
         updateee = findViewById(R.id.updateee);
         updated = findViewById(R.id.updated);
-
-
-
-
-
+        mainpage = findViewById(R.id.mainpage);
 
 
     }

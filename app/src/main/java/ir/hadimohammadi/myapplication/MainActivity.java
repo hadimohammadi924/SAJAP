@@ -147,7 +147,7 @@ public class MainActivity extends AppCompatActivity {
         updatee.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(MainActivity.this, "updatee", Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(MainActivity.this, update.class));
             }
         });
         etelaatt.setOnClickListener(new View.OnClickListener() {
@@ -177,6 +177,7 @@ public class MainActivity extends AppCompatActivity {
         aboutt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 startActivity(new Intent(MainActivity.this, aboutt.class));
             }
         });

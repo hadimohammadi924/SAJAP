@@ -77,17 +77,30 @@
 
     <Button
         android:id="@+id/exitt"
-        app:fontFamily="@font/iran"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_margin="50dp"
-        android:text="خروج"
-        android:textSize="15sp"
+        android:background="@null"
         android:drawableRight="@drawable/ic_baseline_close_24"
+        android:text="خروج"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        app:fontFamily="@font/iran">
+
+    </Button>
+
+    <Button
+        android:id="@+id/mainpage"
+        app:fontFamily="@font/iran"
+        android:layout_margin="20dp"
+        android:text="صفحه اصلی"
+        android:textSize="15sp"
+        android:drawableRight="@drawable/baseline_home_24"
         android:background="@null"
         android:textColor="@color/white"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">
 
     </Button>
-
 </LinearLayout>
 </RelativeLayout>
