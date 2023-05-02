@@ -177,7 +177,7 @@ public class MainActivity extends AppCompatActivity {
         aboutt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(MainActivity.this, "about", Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(MainActivity.this, aboutt.class));
             }
         });
 

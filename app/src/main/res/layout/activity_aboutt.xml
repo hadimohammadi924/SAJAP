@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context=".aboutt">
+
+    <ImageView
+
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:scaleType="fitXY"
+        android:src="@drawable/menupic" />
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:id="@+id/txt1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/b10"
+                android:layout_margin="8dp"
+                android:text="برنامه سجاپ به همت واحد اداری بازارگستر شعبه تبریز در بهار1402 طراحی و ساخته شد. در این برنامه تلاش بر این بوده است که با استفاده از فناوری روز "
+                android:textSize="20dp"
+                app:fontFamily="@font/iran">
+
+            </TextView>
+
+            <ImageView
+                android:id="@+id/img1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:contentDescription="hadiiiii"
+                android:src="@drawable/sajaplogo">
+
+            </ImageView>
+
+            <TextView
+                android:id="@+id/txt2"
+                android:textColor="@color/b10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:text="برنامه سجاپ به همت واحد اداری بازارگستر شعبه تبریز در بهار1402 طراحی و ساخته شد. در این برنامه تلاش بر این بوده است که با استفاده از فناوری روز "
+                android:textSize="20dp"
+                app:fontFamily="@font/iran">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/txt3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:textColor="@color/b10"
+                android:text="برنامه سجاپ به همت واحد اداری بازارگستر شعبه تبریز در بهار1402 طراحی و ساخته شد. در این برنامه تلاش بر این بوده است که با استفاده از فناوری روز "
+                android:textSize="20dp"
+                app:fontFamily="@font/iran">
+
+            </TextView>
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</RelativeLayout>
