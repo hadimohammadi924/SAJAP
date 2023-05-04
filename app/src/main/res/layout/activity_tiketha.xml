@@ -4,12 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+
     tools:context=".tiketha">
 
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:background="@color/purple_700"
+        android:background="@color/b17"
         android:id="@+id/layoutActionBarTicketsList"
         android:layout_height="200dp">
 
@@ -64,7 +65,7 @@
                 android:id="@+id/cresponse"
                 android:layout_marginLeft="10dp"
                 android:layout_marginBottom="60dp"
-                app:backgroundTint="@color/purple_700" />
+                app:backgroundTint="@color/teal_200" />
 
 
         </RelativeLayout>

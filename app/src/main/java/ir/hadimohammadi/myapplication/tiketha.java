@@ -13,6 +13,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+
 import com.android.volley.Cache;
 import com.android.volley.Network;
 import com.android.volley.Request;
@@ -23,8 +24,7 @@ import com.android.volley.toolbox.BasicNetwork;
 import com.android.volley.toolbox.DiskBasedCache;
 import com.android.volley.toolbox.HurlStack;
 import com.android.volley.toolbox.StringRequest;
-import com.example.point.Adapter.shekayatadapter;
-import com.example.point.DataModel.shekayat;
+
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import org.json.JSONArray;
@@ -155,13 +155,11 @@ public class tiketha extends AppCompatActivity {
 
         SharedPreferences sharedPreferences = getSharedPreferences("logggin", Context.MODE_PRIVATE);
         tun.setText(sharedPreferences.getString("user", ""));
-        FontsOverride.setAppFont((ViewGroup)
-                        findViewById(android.R.id.content).getRootView(),
-                Typeface.createFromAsset(getAssets(), "iym.ttf"), true);
+
 
     }
     public void onBackPressed() {
-        startActivity(new Intent(tiketha.this, menu.class));
+        startActivity(new Intent(tiketha.this, MainActivity.class));
     }
 
 

@@ -141,7 +141,7 @@ public class MainActivity extends AppCompatActivity {
         tikett.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(MainActivity.this, "tikett", Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(MainActivity.this, tiketha.class));
             }
         });
         updatee.setOnClickListener(new View.OnClickListener() {

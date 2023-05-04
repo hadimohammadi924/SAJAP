@@ -27,20 +27,20 @@ import com.android.volley.toolbox.BasicNetwork;
 import com.android.volley.toolbox.DiskBasedCache;
 import com.android.volley.toolbox.HurlStack;
 import com.android.volley.toolbox.StringRequest;
-import com.example.point.API.ServiceGenerator;
-import com.example.point.DataModel.shekayat;
+
 
 import java.util.ArrayList;
 
 import saman.zamani.persiandate.PersianDate;
 import saman.zamani.persiandate.PersianDateFormat;
 
+
 public class sabte_shekayat extends AppCompatActivity {
 
     PersianDate pdate = new PersianDate();
     PersianDateFormat pdformater1 = new PersianDateFormat("Y/m/d");
     PersianDateFormat pdformater2 = new PersianDateFormat("H:i:s");
-    ServiceGenerator serviceGenerator;
+   // ServiceGenerator serviceGenerator;
     ArrayList<shekayat> shekayatlist;
     Button shcreate;
     TextView shresponse,shresponseuser,shstatus,hh;
@@ -169,7 +169,7 @@ public class sabte_shekayat extends AppCompatActivity {
 
     }
     public void onBackPressed() {
-        startActivity(new Intent(sabte_shekayat.this, menu.class));
+        startActivity(new Intent(sabte_shekayat.this, MainActivity.class));
     }
 
     public void scast(){
@@ -192,7 +192,7 @@ public class sabte_shekayat extends AppCompatActivity {
         tstatus="در انتظار پاسخ";
 
         x4="1";
-        serviceGenerator = new ServiceGenerator();
+
         SharedPreferences sharedPreferences = getSharedPreferences("logggin", Context.MODE_PRIVATE);
         s_un.setText(sharedPreferences.getString("user", ""));
 
@@ -202,8 +202,8 @@ public class sabte_shekayat extends AppCompatActivity {
 
 
 
-        FontsOverride.setAppFont((ViewGroup)
-                        findViewById(android.R.id.content).getRootView(),
-                Typeface.createFromAsset(getAssets(), "iym.ttf"), true);
+
+
+
     }
 }
