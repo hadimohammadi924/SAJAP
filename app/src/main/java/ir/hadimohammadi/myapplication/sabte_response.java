@@ -41,7 +41,7 @@ public class sabte_response extends AppCompatActivity {
     PersianDate pdate = new PersianDate();
     PersianDateFormat pdformater1 = new PersianDateFormat("Y/m/d");
     PersianDateFormat pdformater2 = new PersianDateFormat("H:i:s");
-    ServiceGenerator serviceGenerator;
+   // ServiceGenerator serviceGenerator;
     ArrayList<shekayat> shekayatlist;
     Button rupdate;
     TextView rshresponse,rshstatus,title3,ctime,cdate,rshtitle,rhh,rs_un,zun,zun2,rshdescrip,rshcode,rshname,rshtell,rshcategori,rshvisitor,rshtozi,rprirority,priority;
@@ -191,7 +191,7 @@ public class sabte_response extends AppCompatActivity {
                 requestQueue.add(stringRequest);
 
 
-                startActivity(new Intent(sabte_response.this,menu.class));
+                startActivity(new Intent(sabte_response.this,MainActivity.class));
 
 
 
@@ -217,7 +217,7 @@ public class sabte_response extends AppCompatActivity {
 
     }
     public void onBackPressed() {
-        startActivity(new Intent(sabte_response.this, menu.class));
+        startActivity(new Intent(sabte_response.this, MainActivity.class));
     }
 
     public void scast(){
@@ -245,7 +245,7 @@ public class sabte_response extends AppCompatActivity {
         tstatus="پاسخ داده شده";
         zun=findViewById(R.id.zun);
         x4="1";
-        serviceGenerator = new ServiceGenerator();
+      //  serviceGenerator = new ServiceGenerator();
         SharedPreferences sharedPreferences = getSharedPreferences("logggin", Context.MODE_PRIVATE);
         rs_un.setText(sharedPreferences.getString("user", ""));
 
@@ -255,9 +255,9 @@ public class sabte_response extends AppCompatActivity {
 
 
 
-        FontsOverride.setAppFont((ViewGroup)
-                        findViewById(android.R.id.content).getRootView(),
-                Typeface.createFromAsset(getAssets(), "iym.ttf"), true);
+
+
+
     }
 
 
