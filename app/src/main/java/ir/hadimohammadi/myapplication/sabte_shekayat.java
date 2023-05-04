@@ -127,7 +127,7 @@ public class sabte_shekayat extends AppCompatActivity {
                     Network network = new BasicNetwork(new HurlStack());
                     requestQueue = new RequestQueue(cache, network);
                     requestQueue.start();
-                    String url = "https://pgtab.info/Home/insert_tiket?tdate="+tdate+"&ttime="+tshtime+"&tcategori="+tshshcategori+"&ttitle="+tshtitle+"&tdescription="+tshdescrip+"&tbgcode="+tshcode+"&bgname="+tshname+"&btell="+tshtell+"&tvisitor="+tshshvisitor+"&tresponse="+ttresponse+"&trdate="+ttrdate+"&trtime="+ttrtime+"&truser="+truser+"&tstatus="+ttstatus+"&x1="+tx1+"&x2="+tx2+"&x3="+tx3+"&x4="+tx4;
+                    String url = "https://pgtab.ir/Home/insert_tiket?tdate="+tdate+"&ttime="+tshtime+"&tcategori="+tshshcategori+"&ttitle="+tshtitle+"&tdescription="+tshdescrip+"&tbgcode="+tshcode+"&bgname="+tshname+"&btell="+tshtell+"&tvisitor="+tshshvisitor+"&tresponse="+ttresponse+"&trdate="+ttrdate+"&trtime="+ttrtime+"&truser="+truser+"&tstatus="+ttstatus+"&x1="+tx1+"&x2="+tx2+"&x3="+tx3+"&x4="+tx4;
                     StringRequest stringRequest = new StringRequest(Request.Method.GET, url,
                             new Response.Listener<String>() {
                                 @Override
@@ -193,8 +193,8 @@ public class sabte_shekayat extends AppCompatActivity {
 
         x4="1";
 
-        SharedPreferences sharedPreferences = getSharedPreferences("logggin", Context.MODE_PRIVATE);
-        s_un.setText(sharedPreferences.getString("user", ""));
+        SharedPreferences sharedPreferences = getSharedPreferences("SAJAP", Context.MODE_PRIVATE);
+        s_un.setText(sharedPreferences.getString("Users_ID", ""));
 
 
 
@@ -206,4 +206,7 @@ public class sabte_shekayat extends AppCompatActivity {
 
 
     }
+
+
+
 }

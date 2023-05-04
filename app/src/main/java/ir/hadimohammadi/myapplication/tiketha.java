@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -40,25 +41,23 @@ public class tiketha extends AppCompatActivity {
     EditText tun;
     RecyclerView ticketsListRecyclerView;
     FloatingActionButton cresponse;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tiketha);
 
 
-         tcast();
+        tcast();
         cresponse.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(tiketha.this,sabte_shekayat.class));
+                startActivity(new Intent(tiketha.this, sabte_shekayat.class));
             }
         });
 
 
-
-
-
-        String tiketurl = "https://pgtab.info/home/getaltiket";
+        String tiketurl = "https://pgtab.ir/home/getaltiket";
 
 
         RequestQueue requestQueue;
@@ -66,12 +65,12 @@ public class tiketha extends AppCompatActivity {
         Network network = new BasicNetwork(new HurlStack());
         requestQueue = new RequestQueue(cache, network);
         requestQueue.start();
-       StringRequest stringRequest = new StringRequest(Request.Method.GET, tiketurl,
+        StringRequest stringRequest = new StringRequest(Request.Method.GET, tiketurl,
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String responsee) {
                         setUpRecyclerView(responsee);
-                       // Toast.makeText(tiketha.this, responsee, Toast.LENGTH_SHORT).show();
+                        Toast.makeText(tiketha.this, responsee, Toast.LENGTH_SHORT).show();
 
                     }
                 },
@@ -84,13 +83,10 @@ public class tiketha extends AppCompatActivity {
         requestQueue.add(stringRequest);
 
 
-
-
     }
 
 
-
-    public List<shekayat> createlist2(String responsee){
+    public List<shekayat> createlist2(String responsee) {
 
         List<shekayat> lst2 = new ArrayList<>();
 
@@ -98,24 +94,22 @@ public class tiketha extends AppCompatActivity {
         try {
             JSONArray jsonArray = new JSONArray(responsee);
 
-            for(int i=0; i < jsonArray.length();i++){
+            for (int i = 0; i < jsonArray.length(); i++) {
                 shekayat info = new shekayat();
                 JSONObject ttemp = jsonArray.getJSONObject(i);
-               info.setId_tiket(ttemp.getInt("id_tiket"));
-              info.setTdate(ttemp.getString("tdate"));
-                info.setTtime(ttemp.getString("ttime"));
-                info.setTcategori(ttemp.getString("tcategori"));
+                info.setId_tiket(ttemp.getInt("id_tiket"));
+                info.setTdate(ttemp.getString("tdate"));
+                info.setTtime(ttemp.getString("ttime"));info.setTcategori(ttemp.getString("tcategori"));
                 info.setTtitle(ttemp.getString("ttitle"));
                 info.setTdescription(ttemp.getString("tdescription"));
-                info.setTbgcode(ttemp.getString("tbgcode"));
-                info.setBgname(ttemp.getString("bgname"));
+                info.setTbgcode(ttemp.getString("tpgcode"));
+                info.setBgname(ttemp.getString("tgname"));
                 info.setBtell(ttemp.getString("btell"));
                 info.setTvisitor(ttemp.getString("tvisitor"));
                 info.setTresponse(ttemp.getString("tresponse"));
-                info.setTrdate(ttemp.getString("trdate"));
-                info.setTrtime(ttemp.getString("trtime"));
+                info.setTrdate(ttemp.getString("trdate"));info.setTrtime(ttemp.getString("trtime"));
                 info.setTruser(ttemp.getString("truser"));
-                info.setTstatus(ttemp.getString("tstatus"));
+                info.setTstatus(ttemp.getString("tstatuse"));
                 info.setX1(ttemp.getString("x1"));
                 info.setX2(ttemp.getString("x2"));
                 info.setX3(ttemp.getString("x3"));
@@ -126,7 +120,6 @@ public class tiketha extends AppCompatActivity {
             }
 
 
-
         } catch (JSONException e) {
             e.printStackTrace();
         }
@@ -135,36 +128,31 @@ public class tiketha extends AppCompatActivity {
 
     }
 
-    public void setUpRecyclerView(String responsee){
+    public void setUpRecyclerView(String responsee) {
         LinearLayoutManager layout = new LinearLayoutManager(tiketha.this, LinearLayoutManager.VERTICAL, false);
         ticketsListRecyclerView.setLayoutManager(layout);
 
-        shekayatadapter shadpter = new shekayatadapter(createlist2(responsee),tiketha.this);
+        shekayatadapter shadpter = new shekayatadapter(createlist2(responsee), tiketha.this);
         ticketsListRecyclerView.setAdapter(shadpter);
 
     }
 
 
-
-    public void tcast(){
-        tun=findViewById(R.id.tun);
-        cresponse=findViewById(R.id.cresponse);
-        ticketsListRecyclerView=findViewById(R.id.ticketsListRecyclerView);
-
+    public void tcast() {
+        tun = findViewById(R.id.tun);
+        cresponse = findViewById(R.id.cresponse);
+        ticketsListRecyclerView = findViewById(R.id.ticketsListRecyclerView);
 
 
-        SharedPreferences sharedPreferences = getSharedPreferences("logggin", Context.MODE_PRIVATE);
-        tun.setText(sharedPreferences.getString("user", ""));
+        SharedPreferences sharedPreferences = getSharedPreferences("SAJAP", Context.MODE_PRIVATE);
+        tun.setText(sharedPreferences.getString("Users_ID", ""));
 
 
     }
+
     public void onBackPressed() {
         startActivity(new Intent(tiketha.this, MainActivity.class));
     }
-
-
-
-
 
 
 }
