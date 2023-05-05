@@ -6,6 +6,7 @@ import android.content.SharedPreferences;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.CountDownTimer;
+import android.provider.Settings;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.View;
@@ -36,9 +37,18 @@ import java.util.Locale;
 import java.util.Timer;
 import java.util.TimerTask;
 
+import saman.zamani.persiandate.PersianDate;
+import saman.zamani.persiandate.PersianDateFormat;
+
 public class Login extends AppCompatActivity {
 
+    PersianDate pdate = new PersianDate();
+    PersianDateFormat pdformater1 = new PersianDateFormat("Y/m/d");
+    PersianDateFormat pdformater2 = new PersianDateFormat("H:i:s");
+
+
     String userpersonal;
+
     TextInputEditText etNumber;
     Button submitButton, sencode;
     LinearLayout codeLayout, one;
@@ -62,6 +72,8 @@ TextView resend;
         one = findViewById(R.id.one);
         countdownText = findViewById(R.id.countdownText);
         resend = findViewById(R.id.resend);
+
+
 
 
         et4 = findViewById(R.id.et4);
@@ -200,6 +212,7 @@ TextView resend;
                                 editor.putString("Users_FName", respo.getString("fname"));
                                 editor.putString("image", respo.getString("pic"));
                                 editor.apply();
+                                insertDevise();
                                 startActivity(new Intent(Login.this, MainActivity.class));
 
 
@@ -319,6 +332,37 @@ TextView resend;
         moveTaskToBack(true);
         android.os.Process.killProcess(android.os.Process.myPid());
         System.exit(1);
+    }
+
+    public  void insertDevise(){
+        String userid=sp.getString("Users_ID", "");
+        String lastupdate=(pdformater1.format(pdate)+"&"+pdformater2.format(pdate));
+        String Devise_name=android.os.Build.MODEL;
+        String Devise_ID=Settings.Secure.getString(Login.this.getContentResolver(), Settings.Secure.ANDROID_ID);
+      //  String token=Settings.Secure.getString(Login.this.getContentResolver(), Settings.Secure.ANDROID_ID);
+
+        RequestQueue requestQueue;
+        Cache cache = new DiskBasedCache(getCacheDir(), 1024 * 1024); // 1MB cap
+        Network network = new BasicNetwork(new HurlStack());
+        requestQueue = new RequestQueue(cache, network);
+        requestQueue.start();
+        String url = "https://pgtab.ir/home/update_lastupdate?suserid="+userid+"&lastupdate="+lastupdate+"&Devise_name="+Devise_name+"&Devise_ID="+Devise_ID;
+        StringRequest stringRequest = new StringRequest(Request.Method.GET, url,
+                new Response.Listener<String>() {
+                    @Override
+                    public void onResponse(String response) {
+                        Toast.makeText(Login.this, "1", Toast.LENGTH_SHORT).show();
+
+                    }
+                },
+                new Response.ErrorListener() {
+                    @Override
+                    public void onErrorResponse(VolleyError error) {
+                        Toast.makeText(Login.this, "2", Toast.LENGTH_SHORT).show();
+                    }
+                });
+        requestQueue.add(stringRequest);
+
     }
 }
 
