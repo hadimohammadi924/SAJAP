@@ -209,6 +209,7 @@ TextView resend;
 
                               //  Toast.makeText(Login.this, respo, Toast.LENGTH_SHORT).show();
                                 editor.putString("Users_IDD", respo.getString("idd"));
+                                editor.putString("post", respo.getString("post"));
                                 editor.putString("Users_ID", respo.getString("id"));
                                 editor.putString("Users_Name", respo.getString("name"));
                                 editor.putString("Users_FName", respo.getString("fname"));
