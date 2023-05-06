@@ -43,8 +43,8 @@ import saman.zamani.persiandate.PersianDateFormat;
 public class Login extends AppCompatActivity {
 
     PersianDate pdate = new PersianDate();
-    PersianDateFormat pdformater1 = new PersianDateFormat("Y/m/d");
-    PersianDateFormat pdformater2 = new PersianDateFormat("H:i:s");
+    PersianDateFormat pdformater1 = new PersianDateFormat("Y/m/d***H:i");
+
 
 
     String userpersonal;
@@ -207,14 +207,17 @@ TextView resend;
                                 Toast.makeText(Login.this, "کد منقضی شده", Toast.LENGTH_SHORT).show();
                             } else if (statue.equals("Success")) {
                                 Toast.makeText(Login.this, respo.toString(), Toast.LENGTH_SHORT).show();
+                              //  Toast.makeText(Login.this, respo, Toast.LENGTH_SHORT).show();
+                                editor.putString("Users_IDD", respo.getString("idd"));
                                 editor.putString("Users_ID", respo.getString("id"));
                                 editor.putString("Users_Name", respo.getString("name"));
                                 editor.putString("Users_FName", respo.getString("fname"));
                                 editor.putString("image", respo.getString("pic"));
                                 editor.apply();
-                                insertDevise();
+                                final String hadi=respo.getString("idd");
+                                insertDevise(Integer.parseInt(hadi));
                                 startActivity(new Intent(Login.this, MainActivity.class));
-
+                                Toast.makeText(Login.this, hadi, Toast.LENGTH_SHORT).show();
 
                             } else if (statue.equals("InvalidCode")) {
                                 Toast.makeText(Login.this, "کد وارد شده اشتباه هست", Toast.LENGTH_SHORT).show();
@@ -334,9 +337,9 @@ TextView resend;
         System.exit(1);
     }
 
-    public  void insertDevise(){
-        String userid=sp.getString("Users_ID", "");
-        String lastupdate=(pdformater1.format(pdate)+"&"+pdformater2.format(pdate));
+    public  void insertDevise(int userid){
+      //  String userid=sp.getString("Users_ID", "");
+        String lastupdate=(pdformater1.format(pdate));
         String Devise_name=android.os.Build.MODEL;
         String Devise_ID=Settings.Secure.getString(Login.this.getContentResolver(), Settings.Secure.ANDROID_ID);
       //  String token=Settings.Secure.getString(Login.this.getContentResolver(), Settings.Secure.ANDROID_ID);
@@ -350,8 +353,8 @@ TextView resend;
         StringRequest stringRequest = new StringRequest(Request.Method.GET, url,
                 new Response.Listener<String>() {
                     @Override
-                    public void onResponse(String response) {
-                        Toast.makeText(Login.this, "1", Toast.LENGTH_SHORT).show();
+                    public void onResponse(String responsee) {
+                        Toast.makeText(Login.this, responsee, Toast.LENGTH_SHORT).show();
 
                     }
                 },
