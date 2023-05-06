@@ -206,7 +206,7 @@ TextView resend;
                             if (statue.equals("CodeExpired")) {
                                 Toast.makeText(Login.this, "کد منقضی شده", Toast.LENGTH_SHORT).show();
                             } else if (statue.equals("Success")) {
-                                Toast.makeText(Login.this, respo.toString(), Toast.LENGTH_SHORT).show();
+
                               //  Toast.makeText(Login.this, respo, Toast.LENGTH_SHORT).show();
                                 editor.putString("Users_IDD", respo.getString("idd"));
                                 editor.putString("Users_ID", respo.getString("id"));
@@ -217,7 +217,7 @@ TextView resend;
                                 final String hadi=respo.getString("idd");
                                 insertDevise(Integer.parseInt(hadi));
                                 startActivity(new Intent(Login.this, MainActivity.class));
-                                Toast.makeText(Login.this, hadi, Toast.LENGTH_SHORT).show();
+
 
                             } else if (statue.equals("InvalidCode")) {
                                 Toast.makeText(Login.this, "کد وارد شده اشتباه هست", Toast.LENGTH_SHORT).show();
