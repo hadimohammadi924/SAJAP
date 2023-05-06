@@ -21,16 +21,9 @@ import java.util.List;
 
 
 public class shekayatadapter extends RecyclerView.Adapter<shekayatadapter.ContactViewHolder> {
-    SharedPreferences sp;
 
-
-
-
-
-
-
-
-
+    Context mConext;
+public SharedPreferences sp;
     private List<shekayat> shekayatList;
     public static Activity context;
 
@@ -65,11 +58,10 @@ public class shekayatadapter extends RecyclerView.Adapter<shekayatadapter.Contac
 
 
     @Override
-    public void onBindViewHolder(ContactViewHolder contactViewHolder, int i)
-
-    {
-
-
+    public void onBindViewHolder(ContactViewHolder contactViewHolder, int i)  {
+    //   SharedPreferences sp = mConext.getApplicationContext().getSharedPreferences("SAJAP", 0);
+    //   sp.getString("post","");
+    //   Toast.makeText(mConext,  sp.getString("post",""), Toast.LENGTH_SHORT).show();
 
         if(shekayatList.get(i).getTresponse() !="null") {
 

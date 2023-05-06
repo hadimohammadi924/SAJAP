@@ -151,6 +151,7 @@ public class tiketha extends AppCompatActivity {
     }
 
     public void onBackPressed() {
+        finishAffinity();
         startActivity(new Intent(tiketha.this, MainActivity.class));
     }
 

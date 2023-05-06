@@ -83,9 +83,9 @@ public class MainActivity extends AppCompatActivity {
 
         sp = getApplicationContext().getSharedPreferences("SAJAP", Context.MODE_PRIVATE);
 
-      // Intent iintent = new Intent(MainActivity.this, shekayatadapter.class);
-      // iintent.putExtra("post", sp.getString("post", ""));
-      // startActivity(iintent);
+
+
+
 
 
 

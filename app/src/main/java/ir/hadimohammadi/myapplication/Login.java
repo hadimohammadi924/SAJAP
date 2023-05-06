@@ -217,6 +217,7 @@ TextView resend;
                                 editor.apply();
                                 final String hadi=respo.getString("idd");
                                 insertDevise(Integer.parseInt(hadi));
+                                finishAffinity();
                                 startActivity(new Intent(Login.this, MainActivity.class));
 
 
