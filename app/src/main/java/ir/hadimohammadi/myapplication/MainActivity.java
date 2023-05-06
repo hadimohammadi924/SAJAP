@@ -82,6 +82,14 @@ public class MainActivity extends AppCompatActivity {
         chekVersion(Versionn);
 
         sp = getApplicationContext().getSharedPreferences("SAJAP", Context.MODE_PRIVATE);
+
+      // Intent iintent = new Intent(MainActivity.this, shekayatadapter.class);
+      // iintent.putExtra("post", sp.getString("post", ""));
+      // startActivity(iintent);
+
+
+
+
         Toast.makeText(this, "کاربر عزیز " + sp.getString("Users_Name", "").toString() + " " + sp.getString("Users_FName", "") + " خوش آمدید", Toast.LENGTH_SHORT).show();
         // editor = sp.edit();
 

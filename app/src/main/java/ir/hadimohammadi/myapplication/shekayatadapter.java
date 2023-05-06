@@ -1,7 +1,11 @@
 package ir.hadimohammadi.myapplication;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.os.Bundle;
+import android.provider.ContactsContract;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,20 +15,35 @@ import android.widget.Toast;
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
+import java.lang.ref.WeakReference;
 import java.util.ArrayList;
 import java.util.List;
 
 
 public class shekayatadapter extends RecyclerView.Adapter<shekayatadapter.ContactViewHolder> {
+    SharedPreferences sp;
+
+
+
+
+
+
+
+
 
     private List<shekayat> shekayatList;
     public static Activity context;
+
     static shekayatadapter shekayatAdapterInterface;
 
     public shekayatadapter(ArrayList<shekayat> shekayatList, shekayatadapter.shekayatAdapterInterface shekayatAdapterInterface) {
         this.shekayatList = shekayatList;
         this.shekayatAdapterInterface = (shekayatadapter) shekayatAdapterInterface;
+
     }
+
+
+
 
     public interface shekayatAdapterInterface {
 
@@ -33,6 +52,7 @@ public class shekayatadapter extends RecyclerView.Adapter<shekayatadapter.Contac
     public shekayatadapter(List<shekayat> shekayatList , Activity activity) {
         this.shekayatList = shekayatList;
         context = activity;
+
     }
 
 
@@ -46,7 +66,11 @@ public class shekayatadapter extends RecyclerView.Adapter<shekayatadapter.Contac
 
     @Override
     public void onBindViewHolder(ContactViewHolder contactViewHolder, int i)
+
     {
+
+
+
         if(shekayatList.get(i).getTresponse() !="null") {
 
 
@@ -65,12 +89,29 @@ public class shekayatadapter extends RecyclerView.Adapter<shekayatadapter.Contac
                 @Override
                 public void onClick(View v) {
 
-                    Toast.makeText(context, "این تیکت پاسخ داده شده است", Toast.LENGTH_SHORT).show();
+
+/*
+                    if (sp.getString("post","").toString().equals("admin")){
+                        Toast.makeText(context, "hale", Toast.LENGTH_SHORT).show();
+                    }
+                    else {
+                        Toast.makeText(context, "noooo", Toast.LENGTH_SHORT).show();
+                    }
+
+
+ */
+
+
+
+            //   Toast.makeText(context, "این تیکت پاسخ داده شده است", Toast.LENGTH_SHORT).show();
+            //  Toast.makeText(context, s, Toast.LENGTH_SHORT).show();
 
                 }
             });
 
-    }else  {
+    }
+        else
+    {
             contactViewHolder.ticketsID.setText("شناسه شکایت:"+shekayatList.get(i).getId_tiket());
             contactViewHolder.datetime.setText("زمان ثبت: "+shekayatList.get(i).getTdate()+"  "+ shekayatList.get(i).getTtime());
             contactViewHolder.titleTickets.setText("عنوان شکایت: "+shekayatList.get(i).getTtitle());
@@ -87,10 +128,11 @@ public class shekayatadapter extends RecyclerView.Adapter<shekayatadapter.Contac
                 public void onClick(View v) {
 
                     Toast.makeText(context, shekayatList.get(contactViewHolder.getAdapterPosition()).getId_tiket()+"", Toast.LENGTH_SHORT).show();
-                Intent intent = new Intent(context, sabte_response.class);
+                    Intent intent = new Intent(context, sabte_response.class);
                     context.startActivity(intent);
 
                     String tiketid =shekayatList.get(contactViewHolder.getAdapterPosition()).getId_tiket()+"";
+
                     Intent i = new Intent(shekayatadapter.context, sabte_response.class);
                     i.putExtra("tiketid",tiketid);
                     context.startActivity(i);
@@ -136,7 +178,19 @@ public class shekayatadapter extends RecyclerView.Adapter<shekayatadapter.Contac
 
             }
 
+
+
+
+
+
+
+
+
+
+
+
         }
+
 
 
 }
