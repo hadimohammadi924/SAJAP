@@ -28,11 +28,12 @@
 
 
             <TextView
+                android:padding="1dp"
                 android:id="@+id/txt1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="@color/b10"
-                android:layout_margin="8dp"
+                android:layout_margin="6dp"
                 android:text="سجاپ(سامانه جامع اطلاعات پرسنل) در بهمن 1401 به پیشنهاد واحد اداری به منظور ارائه راهکار جامع به منظور کنترل و مدیریت اطلاعات پرسنل و ارائه بستر امن برای ارائه و تبادل اطلاعات پروسه طراحی و ساخت آن شروع و در اردیبهشت 1402 نسخه اولیه آن ارائه گردید.  "
                 android:textSize="20dp"
                 app:fontFamily="@font/iran">
@@ -49,11 +50,12 @@
             </ImageView>
 
             <TextView
+                android:padding="2dp"
                 android:id="@+id/txt2"
                 android:textColor="@color/b10"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_margin="8dp"
+                android:layout_margin="6dp"
                 android:text="در ابتدا تمرکز بر این بوده که بتوان اطلاعات سازمانی در بستر امن در اختیار هر فرد قرار بگیرد ولی در ادامه با بهره گیری از فناوری های ایمن و بروز دنیا قابلیت تبادل اطلاعات در دو سمت ادمین و کلاینت امکان پذیر گردید.پروسه طراحی مفهومی طی جلسات متعدد با مهندس ساجدی کیا انجام گرفت که در این مدت استاندارد سازی اطللاعات پایه نیز با همکاری ایشان صورت پذیرفت "
                 android:textSize="20dp"
                 app:fontFamily="@font/iran">
@@ -61,7 +63,7 @@
             </TextView>
             <ImageView
                 android:id="@+id/img2"
-                android:layout_margin="15dp"
+                android:layout_margin="20dp"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:contentDescription="hadiiiii"
@@ -72,20 +74,21 @@
 
 
             <TextView
+                android:layout_marginTop="-20dp"
                 android:id="@+id/txt3"
-                android:layout_marginTop="15dp"
+               android:layout_marginBottom="20dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:textColor="@color/black"
-                android:text=" مهندس ساجدی کیا "
-                android:textSize="20dp"
+                android:text=" مهندس ساجدی کیا - طراح و ایده پرداز سجاپ "
+                android:textSize="13dp"
                 app:fontFamily="@font/iran">
 
 
             </TextView>
             <TextView
-
+                android:padding="2dp"
                 android:id="@+id/txt4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -99,8 +102,9 @@
             </TextView>
 
             <ImageView
+                android:padding="2dp"
                 android:id="@+id/img3"
-                android:layout_margin="15dp"
+                android:layout_margin="20dp"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:contentDescription="hadiiiii"
@@ -108,14 +112,16 @@
 
             </ImageView>
             <TextView
+                android:padding="2dp"
                 android:id="@+id/txt5"
-                android:layout_marginTop="15dp"
+                android:layout_marginTop="-24dp"
+               android:layout_marginBottom="10dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:textColor="@color/black"
-                android:text=" هادی محمدی "
-                android:textSize="20dp"
+                android:text=" هادی محمدی - برنامه نویس وب و اندروید"
+                android:textSize="13dp"
                 app:fontFamily="@font/iran">
 
 
@@ -123,9 +129,10 @@
             <TextView
 
                 android:id="@+id/txt6"
+                android:padding="2dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_margin="8dp"
+                android:layout_margin="6dp"
                 android:textColor="@color/b10"
                 android:text=" رویکرد اصلی در برنامه سجاپ ارائه بستر امن و مطمعن جهت تبادل اطلاعات می باشد که به همین منظور پروسه طراحی برنامه ضمن پیاده سازی در سرور اختصاصی و مطمئن، از استاندارد های روز امنیتی بهره برده است.سجاپ با استفاده از پنل پیامکی مستقیما در گوشی کاربر قابل اجرا است و همچنین هیچ مجوز دسترسی از کاربر دریافت نمی کند. "
                 android:textSize="20dp"
