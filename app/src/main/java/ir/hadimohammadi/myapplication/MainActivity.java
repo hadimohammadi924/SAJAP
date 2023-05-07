@@ -86,10 +86,6 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-
-
-
-
         Toast.makeText(this, "کاربر عزیز " + sp.getString("Users_Name", "").toString() + " " + sp.getString("Users_FName", "") + " خوش آمدید", Toast.LENGTH_SHORT).show();
         // editor = sp.edit();
 

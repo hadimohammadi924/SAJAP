@@ -33,7 +33,7 @@
                 android:layout_height="wrap_content"
                 android:textColor="@color/b10"
                 android:layout_margin="8dp"
-                android:text="برنامه سجاپ به همت واحد اداری بازارگستر شعبه تبریز در بهار1402 طراحی و ساخته شد. در این برنامه تلاش بر این بوده است که با استفاده از فناوری روز "
+                android:text="سجاپ(سامانه جامع اطلاعات پرسنل) در بهمن 1401 به پیشنهاد واحد اداری به منظور ارائه راهکار جامع به منظور کنترل و مدیریت اطلاعات پرسنل و ارائه بستر امن برای ارائه و تبادل اطلاعات پروسه طراحی و ساخت آن شروع و در اردیبهشت 1402 نسخه اولیه آن ارائه گردید.  "
                 android:textSize="20dp"
                 app:fontFamily="@font/iran">
 
@@ -54,23 +54,84 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="8dp"
-                android:text="برنامه سجاپ به همت واحد اداری بازارگستر شعبه تبریز در بهار1402 طراحی و ساخته شد. در این برنامه تلاش بر این بوده است که با استفاده از فناوری روز "
+                android:text="در ابتدا تمرکز بر این بوده که بتوان اطلاعات سازمانی در بستر امن در اختیار هر فرد قرار بگیرد ولی در ادامه با بهره گیری از فناوری های ایمن و بروز دنیا قابلیت تبادل اطلاعات در دو سمت ادمین و کلاینت امکان پذیر گردید.پروسه طراحی مفهومی طی جلسات متعدد با مهندس ساجدی کیا انجام گرفت که در این مدت استاندارد سازی اطللاعات پایه نیز با همکاری ایشان صورت پذیرفت "
                 android:textSize="20dp"
                 app:fontFamily="@font/iran">
 
             </TextView>
+            <ImageView
+                android:id="@+id/img2"
+                android:layout_margin="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:contentDescription="hadiiiii"
+                android:src="@drawable/sajaplogo">
+
+            </ImageView>
+
+
 
             <TextView
                 android:id="@+id/txt3"
+                android:layout_marginTop="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textColor="@color/black"
+                android:text=" مهندس ساجدی کیا "
+                android:textSize="20dp"
+                app:fontFamily="@font/iran">
+
+
+            </TextView>
+            <TextView
+
+                android:id="@+id/txt4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="8dp"
                 android:textColor="@color/b10"
-                android:text="برنامه سجاپ به همت واحد اداری بازارگستر شعبه تبریز در بهار1402 طراحی و ساخته شد. در این برنامه تلاش بر این بوده است که با استفاده از فناوری روز "
+                android:text=" رویکرد اصلی در برنامه سجاپ ارائه بستر امن و مطمعن جهت تبادل اطلاعات می باشد که به همین منظور پروسه طراحی برنامه ضمن پیاده سازی در سرور اختصاصی و مطمئن، از استاندارد های روز امنیتی بهره برده است.سجاپ با استفاده از پنل پیامکی مستقیما در گوشی کاربر قابل اجرا است و همچنین هیچ مجوز دسترسی از کاربر دریافت نمی کند. "
                 android:textSize="20dp"
                 app:fontFamily="@font/iran">
 
+
             </TextView>
+
+            <ImageView
+                android:id="@+id/img3"
+                android:layout_margin="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:contentDescription="hadiiiii"
+                android:src="@drawable/sajaplogo">
+
+            </ImageView>
+            <TextView
+                android:id="@+id/txt5"
+                android:layout_marginTop="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textColor="@color/black"
+                android:text=" هادی محمدی "
+                android:textSize="20dp"
+                app:fontFamily="@font/iran">
+
+
+            </TextView>
+            <TextView
+
+                android:id="@+id/txt6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:textColor="@color/b10"
+                android:text=" رویکرد اصلی در برنامه سجاپ ارائه بستر امن و مطمعن جهت تبادل اطلاعات می باشد که به همین منظور پروسه طراحی برنامه ضمن پیاده سازی در سرور اختصاصی و مطمئن، از استاندارد های روز امنیتی بهره برده است.سجاپ با استفاده از پنل پیامکی مستقیما در گوشی کاربر قابل اجرا است و همچنین هیچ مجوز دسترسی از کاربر دریافت نمی کند. "
+                android:textSize="20dp"
+                app:fontFamily="@font/iran">
+            </TextView>
+
         </LinearLayout>
 
     </ScrollView>

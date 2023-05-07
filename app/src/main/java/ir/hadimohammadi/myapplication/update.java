@@ -119,6 +119,7 @@ public class update extends AppCompatActivity {
                                 exitt.setVisibility(View.INVISIBLE);
                                 now_version.setText("نسخه فعلی برنامه نصب شده در گوشی شما: " + respo.getString("V_v"));
                                 updateVersion.setText("ورژن بروز آماده بارگیری: " + respo.getString("xx1"));
+
                             } else {
                                 updatetext.setText(respo.getString("date"));
                                 mainpage.setVisibility(View.GONE);
@@ -155,10 +156,21 @@ public class update extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
+      //  no();
+        yes();
+
+
+    }
+
+
+    public void no(){
         super.onBackPressed();
         moveTaskToBack(true);
         android.os.Process.killProcess(android.os.Process.myPid());
         System.exit(1);
-    }
-
+    };
+    public void yes(){
+       finishAffinity();
+        startActivity(new Intent(update.this, MainActivity.class));
+    };
 }
