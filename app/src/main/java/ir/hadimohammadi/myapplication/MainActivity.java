@@ -139,7 +139,8 @@ public class MainActivity extends AppCompatActivity {
         khabarr.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(MainActivity.this, "khabarr", Toast.LENGTH_SHORT).show();
+               finishAffinity();
+                startActivity(new Intent(MainActivity.this, tablo.class));
             }
         });
         tikett.setOnClickListener(new View.OnClickListener() {
