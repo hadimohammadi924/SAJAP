@@ -32,7 +32,7 @@ public class etelatadapter extends RecyclerView.Adapter<etelatadapter.ContactVie
     public etelatadapter(ArrayList<etelaat> etelatlist, etelatadapter.etelatAdapterInterface etelatAdapterInterface) {
         this.etelatList = etelatlist;
         this.etelatAdapterInterface = (etelatadapter) etelatAdapterInterface;
-
+//
     }
 
 
