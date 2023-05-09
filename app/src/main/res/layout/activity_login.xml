@@ -67,6 +67,7 @@
                     android:gravity="center"
                     android:inputType="number"
                     android:maxLength="6"
+                    app:fontFamily="@font/iran"
                     android:padding="30dp"
                     android:textColor="#333"
                     android:textSize="23sp" />
@@ -81,6 +82,7 @@
                 android:enabled="false"
                 android:background="@color/purple_200"
                 android:onClick="login"
+                app:fontFamily="@font/iran"
                 android:textSize="12dp"
                 android:text="دریاف رمز ورود"
                 android:textColor="#434040" />
