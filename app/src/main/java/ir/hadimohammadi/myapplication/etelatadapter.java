@@ -5,6 +5,7 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -16,6 +17,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.airbnb.lottie.LottieAnimationView;
 
+import java.net.URISyntaxException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -68,7 +70,15 @@ public class etelatadapter extends RecyclerView.Adapter<etelatadapter.ContactVie
             contactViewHolder.etelaperiod.setText("عنوان شکایت: " + etelatList.get(i).getType2());
             contactViewHolder.type3.setText("حوزه شکایت: " + etelatList.get(i).getType3());
             contactViewHolder.type4.setText("ثبت شده توسط:" + etelatList.get(i).getType4());
+            ContactViewHolder.tabb.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    //  Toast.makeText(mConext,contactViewHolder.eteladate.getText().;
+                    Toast.makeText(context, contactViewHolder.eteladate.getText().toString(),Toast.LENGTH_SHORT).show();
 
+
+                }
+            });
 
         }
         else
@@ -83,13 +93,8 @@ public class etelatadapter extends RecyclerView.Adapter<etelatadapter.ContactVie
             ContactViewHolder.tabb.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Intent intent = new Intent(context, tablo.class);
-                  //  context.startActivity(intent);
-
-               //     String hh =etelatList.get(contactViewHolder.getAdapterPosition(i))+"";
-
-
-
+                  //  Toast.makeText(mConext,contactViewHolder.eteladate.getText().;
+                 Toast.makeText(context, contactViewHolder.eteladate.getText().toString(),Toast.LENGTH_SHORT).show();
 
 
                 }
