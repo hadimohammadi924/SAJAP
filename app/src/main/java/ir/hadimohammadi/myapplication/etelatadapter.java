@@ -95,7 +95,8 @@ public class etelatadapter extends RecyclerView.Adapter<etelatadapter.ContactVie
                 public void onClick(View v) {
                   //  Toast.makeText(mConext,contactViewHolder.eteladate.getText().;
                  Toast.makeText(context, contactViewHolder.eteladate.getText().toString(),Toast.LENGTH_SHORT).show();
-
+                    contactViewHolder.typeee.setText(contactViewHolder.eteladate.getText().toString());
+                    contactViewHolder.typeee.setVisibility(View.VISIBLE);
 
                 }
             });
@@ -116,7 +117,7 @@ public class etelatadapter extends RecyclerView.Adapter<etelatadapter.ContactVie
 
 
         static CardView tabb, loggo;
-        TextView eteladate, etelatitle, etelaperiod, type3, type4;
+        TextView eteladate, etelatitle, etelaperiod, type3, type4,typeee;
         LottieAnimationView maill, showw;
 
         public ContactViewHolder(final View v) {
@@ -132,6 +133,7 @@ public class etelatadapter extends RecyclerView.Adapter<etelatadapter.ContactVie
             showw = v.findViewById(R.id.showw);
             loggo = v.findViewById(R.id.loggo);
             tabb = v.findViewById(R.id.tabb);
+            typeee = v.findViewById(R.id.typeee);
 
 
         }

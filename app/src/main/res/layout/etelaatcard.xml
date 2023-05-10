@@ -120,5 +120,15 @@
 
 
     </androidx.cardview.widget.CardView>
+<TextView
+    android:visibility="gone"
+    android:background="@color/b3"
+    android:gravity="center"
+    android:layout_centerInParent="true"
 
+    android:id="@+id/typeee"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+</TextView>
 </RelativeLayout>
