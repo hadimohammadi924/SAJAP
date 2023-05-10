@@ -1,6 +1,7 @@
 package ir.hadimohammadi.myapplication;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -8,6 +9,8 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -36,15 +39,22 @@ public class tablo extends AppCompatActivity {
 
     RecyclerView tabloListRecyclerView;
     TextView xtt2;
+       static TextView typeeezq;
+    Button getitq;
     PersianDate pdate = new PersianDate();
     PersianDateFormat pdformater1 = new PersianDateFormat("Y/m/d");
-
+    static CardView tabbhq;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tablo);
         tcast();
-
+        getitq.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                tabbhq.setVisibility(View.INVISIBLE);
+            }
+        });
         String tiketurl = "https://pgtab.ir/home/ettelaat";
 
 
@@ -58,7 +68,7 @@ public class tablo extends AppCompatActivity {
                     @Override
                     public void onResponse(String responsee) {
                         setUpRecyclerView(responsee);
-                        Toast.makeText(tablo.this, responsee, Toast.LENGTH_SHORT).show();
+                      //  Toast.makeText(tablo.this, responsee, Toast.LENGTH_SHORT).show();
 
                     }
                 },
@@ -78,7 +88,10 @@ public class tablo extends AppCompatActivity {
     public void tcast() {
 
         xtt2 = findViewById(R.id.xtt2);
+        getitq = findViewById(R.id.getitq);
+        tabbhq = findViewById(R.id.tabbhq);
         tabloListRecyclerView = findViewById(R.id.tabloListRecyclerView);
+        typeeezq = findViewById(R.id.typeeezq);
 
 
         SharedPreferences sharedPreferences = getSharedPreferences("SAJAP", Context.MODE_PRIVATE);

@@ -9,78 +9,113 @@
 
 
     <RelativeLayout
-        android:layout_width="match_parent"
-        android:background="@color/b17"
         android:id="@+id/layoutActionBarTicketsList"
-        android:layout_height="200dp">
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="@color/b17">
 
         <TextView
             android:id="@+id/xtt1"
-            app:fontFamily="@font/iran"
             android:layout_width="wrap_content"
-            android:textColor="@color/white"
-            android:textSize="30dp"
+            android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="20dp"
             android:text="لیست اطلاعیه ها"
-            android:layout_height="wrap_content"/>
+            android:textColor="@color/white"
+            android:textSize="30dp"
+            app:fontFamily="@font/iran" />
+
         <TextView
             android:id="@+id/xtt2"
-           android:layout_below="@+id/xtt1"
-            android:layout_width="wrap_content"
-            android:textColor="@color/white"
-            android:textSize="20dp"
-            app:fontFamily="@font/iran"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="10dp"
-
-            android:layout_height="wrap_content"/>
-        <EditText
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/tun"></EditText>
+            android:layout_below="@+id/xtt1"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/white"
+            android:textSize="20dp"
+
+            app:fontFamily="@font/iran" />
+
+        <EditText
+            android:id="@+id/tun"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"></EditText>
 
     </RelativeLayout>
 
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/layoutActionBarTicketsList"
+
         android:layout_marginLeft="10dp"
         android:layout_marginTop="-80dp"
-
-        app:cardElevation="20dp"
-        app:cardCornerRadius="30dp"
-        android:layout_marginBottom="-20dp"
         android:layout_marginRight="10dp"
-        android:layout_below="@id/layoutActionBarTicketsList"
-        android:layout_height="match_parent">
+        android:layout_marginBottom="-20dp"
+        app:cardCornerRadius="30dp"
+        app:cardElevation="20dp">
 
 
         <RelativeLayout
-            android:padding="10dp"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:padding="10dp">
 
             <androidx.recyclerview.widget.RecyclerView
-                android:layout_width="match_parent"
                 android:id="@+id/tabloListRecyclerView"
-                android:layout_height="wrap_content"/>
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/tabbhq"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:visibility="gone"
+                app:cardBackgroundColor="#A5E4FB"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="0dp">
 
 
+                <LinearLayout
 
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="0dp">
 
+                    <TextView
+                        android:id="@+id/typeeezq"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_margin="40dp"
+                        android:background="@color/b10"
+                        android:gravity="center"
+                        android:text="zzzzzzzzzzzzz"
+                        android:visibility="visible">
 
+                    </TextView>
+
+                    <Button
+                        android:id="@+id/getitq"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="متوجه شدم"
+                        android:visibility="visible">
+
+                    </Button>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
 
 
         </RelativeLayout>
 
 
-
     </androidx.cardview.widget.CardView>
-
-
-
-
 
 
 </RelativeLayout>

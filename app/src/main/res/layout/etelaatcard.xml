@@ -32,7 +32,16 @@
                 android:textColor="#000"
                 android:textSize="16sp"
                 app:fontFamily="@font/iran" />
-
+            <TextView
+                android:id="@+id/typ"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="تاریخ:1402/02/02 "
+                android:textColor="#000"
+                android:textSize="16sp"
+                app:fontFamily="@font/iran" />
             <TextView
                 android:id="@+id/etelatitle"
                 android:layout_width="match_parent"
@@ -120,15 +129,5 @@
 
 
     </androidx.cardview.widget.CardView>
-<TextView
-    android:visibility="gone"
-    android:background="@color/b3"
-    android:gravity="center"
-    android:layout_centerInParent="true"
 
-    android:id="@+id/typeee"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content">
-
-</TextView>
 </RelativeLayout>
