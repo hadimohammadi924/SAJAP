@@ -95,6 +95,7 @@
                         android:layout_margin="40dp"
                         android:background="@color/b10"
                         android:gravity="center"
+                        app:fontFamily="@font/iran"
                         android:text="zzzzzzzzzzzzz"
                         android:visibility="visible">
 
@@ -102,6 +103,7 @@
 
                     <Button
                         android:id="@+id/getitq"
+                        app:fontFamily="@font/iran"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="متوجه شدم"
@@ -117,17 +119,18 @@
     android:layout_height="match_parent">
 
 </ImageView>
-            <Button
 
-                android:gravity="center"
-                android:layout_centerInParent="true"
-                android:layout_below="@+id/picc"
-                android:layout_marginTop="-140dp"
+            <Button
+android:visibility="gone"
+                app:fontFamily="@font/iran"
                 android:id="@+id/getitqq"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="متوجه شدم"
-             ></Button>
+                android:layout_below="@+id/picc"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="-140dp"
+                android:gravity="center"
+                android:text="متوجه شدم"></Button>
         </RelativeLayout>
 
 
