@@ -110,8 +110,24 @@
                     </Button>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
+<ImageView
 
+    android:id="@+id/picc"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
 
+</ImageView>
+            <Button
+
+                android:gravity="center"
+                android:layout_centerInParent="true"
+                android:layout_below="@+id/picc"
+                android:layout_marginTop="-140dp"
+                android:id="@+id/getitqq"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="متوجه شدم"
+             ></Button>
         </RelativeLayout>
 
 

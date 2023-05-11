@@ -17,6 +17,7 @@ import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.airbnb.lottie.LottieAnimationView;
+import com.bumptech.glide.Glide;
 
 import java.net.URISyntaxException;
 import java.util.ArrayList;
@@ -65,7 +66,7 @@ public class etelatadapter extends RecyclerView.Adapter<etelatadapter.ContactVie
 
         if (etelatList.get(i).getType().equals("1")) {
 
-            contactViewHolder.typ.setText( etelatList.get(i).getType());
+            contactViewHolder.typ.setText(etelatList.get(i).getType());
             contactViewHolder.eteladate.setText("اطلاعیه مورخه :" + etelatList.get(i).getDate());
             contactViewHolder.etelatitle.setText("عنوان: " + etelatList.get(i).getType1());
             contactViewHolder.etelaperiod.setText(etelatList.get(i).getType2());
@@ -75,36 +76,55 @@ public class etelatadapter extends RecyclerView.Adapter<etelatadapter.ContactVie
                 @Override
                 public void onClick(View v) {
                     //  Toast.makeText(mConext,contactViewHolder.eteladate.getText().;
-                   // Toast.makeText(context, contactViewHolder.etelaperiod.getText().toString(), Toast.LENGTH_SHORT).show();
+                    // Toast.makeText(context, contactViewHolder.etelaperiod.getText().toString(), Toast.LENGTH_SHORT).show();
                     tablo.tabbhq.setVisibility(View.VISIBLE);
                     tablo.typeeezq.setText(contactViewHolder.etelaperiod.getText());
 
+
                 }
             });
+            contactViewHolder.showw.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
 
+                    String o=etelatList.get(i).getType3();
+
+                    tablo.getitqq.setVisibility(View.VISIBLE);
+                    tablo.picc.setVisibility(View.VISIBLE);
+                    Glide
+                            .with(context)
+                          //  .load(contactViewHolder.type3.toString())
+                           // .load("https://pgtab.info/user/hadi.jpg")
+                            .load(o)
+                            .centerCrop()
+
+                            .into(tablo.picc);
+
+                }
+            });
         } else {
             ContactViewHolder.loggo.setVisibility(View.GONE);
             contactViewHolder.eteladate.setText("اطلاعیه مورخه :" + etelatList.get(i).getDate());
-            contactViewHolder.typ.setText( etelatList.get(i).getType());
+            contactViewHolder.typ.setText(etelatList.get(i).getType());
             contactViewHolder.etelatitle.setText("عنوان: " + etelatList.get(i).getType1());
-            contactViewHolder.etelaperiod.setText(  etelatList.get(i).getType2());
+            contactViewHolder.etelaperiod.setText(etelatList.get(i).getType2());
             contactViewHolder.type3.setText("حوزه شکایت: " + etelatList.get(i).getType3());
             contactViewHolder.type4.setText("ثبت شده توسط:" + etelatList.get(i).getType4());
 
             ContactViewHolder.tabb.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                   tablo.tabbhq.setVisibility(View.VISIBLE);
-                   tablo.typeeezq.setText(contactViewHolder.etelaperiod.getText());
-                   // contactViewHolder.typeeez.setText(contactViewHolder.etelaperiod.getText().toString());
-                 //  Toast.makeText(context, "3", Toast.LENGTH_SHORT).show();
-                 //  ContactViewHolder.tabbh.setVisibility(View.VISIBLE);
-                 //  Toast.makeText(context, "4", Toast.LENGTH_SHORT).show();
+                    tablo.tabbhq.setVisibility(View.VISIBLE);
+                    tablo.typeeezq.setText(contactViewHolder.etelaperiod.getText());
+                    // contactViewHolder.typeeez.setText(contactViewHolder.etelaperiod.getText().toString());
+                    //  Toast.makeText(context, "3", Toast.LENGTH_SHORT).show();
+                    //  ContactViewHolder.tabbh.setVisibility(View.VISIBLE);
+                    //  Toast.makeText(context, "4", Toast.LENGTH_SHORT).show();
                     //  Toast.makeText(mConext,contactViewHolder.eteladate.getText().;
-                 //   Toast.makeText(context, contactViewHolder.eteladate.getText().toString(), Toast.LENGTH_SHORT).show();
+                    //   Toast.makeText(context, contactViewHolder.eteladate.getText().toString(), Toast.LENGTH_SHORT).show();
 
 
-               //    contactViewHolder.typeee.setVisibility(View.VISIBLE);
+                    //    contactViewHolder.typeee.setVisibility(View.VISIBLE);
 
                 }
             });
@@ -123,8 +143,8 @@ public class etelatadapter extends RecyclerView.Adapter<etelatadapter.ContactVie
     public static class ContactViewHolder extends RecyclerView.ViewHolder {
 
 
-        static CardView tabb, loggo,tabbh;
-        TextView eteladate, etelatitle, etelaperiod, type3, type4, typeeez,typ;
+        static CardView tabb, loggo, tabbh;
+        TextView eteladate, etelatitle, etelaperiod, type3, type4, typeeez, typ;
         LottieAnimationView maill, showw;
         Button getit;
 
@@ -141,9 +161,9 @@ public class etelatadapter extends RecyclerView.Adapter<etelatadapter.ContactVie
             showw = v.findViewById(R.id.showw);
             loggo = v.findViewById(R.id.loggo);
             tabb = v.findViewById(R.id.tabb);
-          //  typeeez = v.findViewById(R.id.typeeez);
-          //  getit = v.findViewById(R.id.getit);
-          //  tabbh = v.findViewById(R.id.tabbh);
+            //  typeeez = v.findViewById(R.id.typeeez);
+            //  getit = v.findViewById(R.id.getit);
+            //  tabbh = v.findViewById(R.id.tabbh);
             typ = v.findViewById(R.id.typ);
 
 

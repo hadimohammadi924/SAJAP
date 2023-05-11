@@ -11,6 +11,7 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -39,11 +40,13 @@ public class tablo extends AppCompatActivity {
 
     RecyclerView tabloListRecyclerView;
     TextView xtt2;
-       static TextView typeeezq;
-    Button getitq;
+    static ImageView picc;
+    static TextView typeeezq;
+    static Button getitq,getitqq;
     PersianDate pdate = new PersianDate();
     PersianDateFormat pdformater1 = new PersianDateFormat("Y/m/d");
     static CardView tabbhq;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -53,6 +56,13 @@ public class tablo extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 tabbhq.setVisibility(View.INVISIBLE);
+            }
+        });
+        getitqq.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                picc.setVisibility(View.GONE);
+                getitqq.setVisibility(View.GONE);
             }
         });
         String tiketurl = "https://pgtab.ir/home/ettelaat";
@@ -68,7 +78,7 @@ public class tablo extends AppCompatActivity {
                     @Override
                     public void onResponse(String responsee) {
                         setUpRecyclerView(responsee);
-                      //  Toast.makeText(tablo.this, responsee, Toast.LENGTH_SHORT).show();
+                        //  Toast.makeText(tablo.this, responsee, Toast.LENGTH_SHORT).show();
 
                     }
                 },
@@ -84,7 +94,6 @@ public class tablo extends AppCompatActivity {
     }
 
 
-
     public void tcast() {
 
         xtt2 = findViewById(R.id.xtt2);
@@ -92,10 +101,12 @@ public class tablo extends AppCompatActivity {
         tabbhq = findViewById(R.id.tabbhq);
         tabloListRecyclerView = findViewById(R.id.tabloListRecyclerView);
         typeeezq = findViewById(R.id.typeeezq);
+        picc = findViewById(R.id.picc);
+        getitqq = findViewById(R.id.getitqq);
 
 
         SharedPreferences sharedPreferences = getSharedPreferences("SAJAP", Context.MODE_PRIVATE);
-        xtt2.setText("امروز مورخ : "+pdformater1.format(pdate));
+        xtt2.setText("امروز مورخ : " + pdformater1.format(pdate));
     }
 
     public List<etelaat> createlist2(String responsee) {
@@ -116,7 +127,6 @@ public class tablo extends AppCompatActivity {
                 info.setType2(ttemp.getString("type2"));
                 info.setType3(ttemp.getString("type3"));
                 info.setType4(ttemp.getString("type4"));
-
 
 
                 lst2.add(info);
@@ -141,10 +151,9 @@ public class tablo extends AppCompatActivity {
     }
 
 
-
     @Override
     public void onBackPressed() {
-       finishAffinity();
+        finishAffinity();
         startActivity(new Intent(tablo.this, MainActivity.class));
     }
 
