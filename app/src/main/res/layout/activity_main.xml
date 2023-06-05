@@ -141,7 +141,7 @@
             android:layout_marginTop="10dp"
             app:lottie_autoPlay="true"
             app:lottie_loop="true"
-            app:lottie_rawRes="@raw/shenasnamee" />
+            app:lottie_rawRes="@raw/gpt2" />
 
         <TextView
             android:id="@+id/shenasname"
@@ -150,7 +150,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="-10dp"
             android:gravity="center"
-            android:text="اطلاعات شناسنامه"
+            android:text="هوش مصنوعی"
             android:textColor="@color/b10"
             android:textSize="15dp">
 

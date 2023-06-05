@@ -133,7 +133,8 @@ public class MainActivity extends AppCompatActivity {
         shenasnamee.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(MainActivity.this, "shenasname", Toast.LENGTH_SHORT).show();
+                finishAffinity();
+                startActivity(new Intent(MainActivity.this, MainActivitychat.class));
             }
         });
         khabarr.setOnClickListener(new View.OnClickListener() {
