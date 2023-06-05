@@ -35,7 +35,7 @@ public class MainActivitychat extends AppCompatActivity {
     private EditText mEditText;
     private Button mButton;
     private String apiUrl = "https://api.openai.com/v1/completions";
-    private String accessToken = "sk-59CS1TbVnnIp64t6ecIT3BlbkFJvz16p8NoIY5f4CibafbP";
+    private String accessToken = "sk-wlvknhCrBDWXPozzkRWT3BlbkFJS8rugMGVbFcSNu4iAfw2";
     private List < Message > mMessages;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
