@@ -6,6 +6,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -35,7 +36,7 @@ public class MainActivitychat extends AppCompatActivity {
     private EditText mEditText;
     private Button mButton;
     private String apiUrl = "https://api.openai.com/v1/completions";
-    private String accessToken = "sk-lvknhCrBDWXPozzkRWT3BlbkFJS8rugMGVbFcSNu4iAfw2";
+    private String accessToken = "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";
     private List < Message > mMessages;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -80,13 +81,17 @@ public class MainActivitychat extends AppCompatActivity {
             //requestBody.put("stream", false);
             //requestBody.put("logprobs", null);
             //requestBody.put("stop", ".");
-            requestBody.put("model", "text-davinci-003");
+
+           requestBody.put("model", "text-davinci-003");
+           // requestBody.put("model", "text-davinci-fa-003");
             requestBody.put("prompt", text);
-            requestBody.put("max_tokens", 100);
+            requestBody.put("max_tokens", 600);
             requestBody.put("temperature", 1);
             requestBody.put("top_p", 1);
             requestBody.put("frequency_penalty", 0.0);
             requestBody.put("presence_penalty", 0.0);
+
+
         } catch (JSONException e) {
             e.printStackTrace();
         }
@@ -96,7 +101,9 @@ public class MainActivitychat extends AppCompatActivity {
                 try {
                     JSONArray choicesArray = response.getJSONArray("choices");
                     JSONObject choiceObject = choicesArray.getJSONObject(0);
-                    String text = choiceObject.getString("text");
+                   // String text = choiceObject.getString("text");
+                    String text = choiceObject.getString("text").replaceFirst("\n", " ");
+                    mEditText.setText(response.toString());
                     Log.e("API Response", response.toString());
                     //Toast.makeText(MainActivity.this,text,Toast.LENGTH_SHORT).show();
                     mMessages.add(new Message(text.replaceFirst("\n", "").replaceFirst("\n", ""), false));
