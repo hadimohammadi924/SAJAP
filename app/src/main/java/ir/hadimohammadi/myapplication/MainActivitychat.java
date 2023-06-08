@@ -83,13 +83,14 @@ public class MainActivitychat extends AppCompatActivity {
             //requestBody.put("stop", ".");
 
            requestBody.put("model", "text-davinci-003");
-           // requestBody.put("model", "text-davinci-fa-003");
+
+          //  requestBody.put("prompt", "The following is a conversation with an AI assistant. The assistant is helpful, creative, clever, and very friendly.\\n\\nHuman: Hello, who are you?\\nAI: I am an AI created by OpenAI. How can I help you today?\\nHuman: I'd like to cancel my subscription.\\nAI:");
             requestBody.put("prompt", text);
             requestBody.put("max_tokens", 600);
-            requestBody.put("temperature", 1);
+            requestBody.put("temperature", 0.9);
             requestBody.put("top_p", 1);
             requestBody.put("frequency_penalty", 0.0);
-            requestBody.put("presence_penalty", 0.0);
+            requestBody.put("presence_penalty", 0.6);
 
 
         } catch (JSONException e) {
@@ -103,7 +104,7 @@ public class MainActivitychat extends AppCompatActivity {
                     JSONObject choiceObject = choicesArray.getJSONObject(0);
                    // String text = choiceObject.getString("text");
                     String text = choiceObject.getString("text").replaceFirst("\n", " ");
-                    mEditText.setText(response.toString());
+                   // mEditText.setText(response.toString());
                     Log.e("API Response", response.toString());
                     //Toast.makeText(MainActivity.this,text,Toast.LENGTH_SHORT).show();
                     mMessages.add(new Message(text.replaceFirst("\n", "").replaceFirst("\n", ""), false));
