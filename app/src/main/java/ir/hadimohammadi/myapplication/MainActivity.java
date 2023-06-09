@@ -86,7 +86,7 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-        Toast.makeText(this, "کاربر عزیز " + sp.getString("Users_Name", "").toString() + " " + sp.getString("Users_FName", "") + " خوش آمدید", Toast.LENGTH_SHORT).show();
+        //Toast.makeText(this, "کاربر عزیز " + sp.getString("Users_Name", "").toString() + " " + sp.getString("Users_FName", "") + " خوش آمدید", Toast.LENGTH_SHORT).show();
         // editor = sp.edit();
 
         if (sp.getString("Users_ID", "").equals("")) {
@@ -159,7 +159,8 @@ public class MainActivity extends AppCompatActivity {
         etelaatt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(MainActivity.this, "etelaat", Toast.LENGTH_SHORT).show();
+                finishAffinity();
+                startActivity(new Intent(MainActivity.this, etelatesazmani.class));
             }
         });
         renamee.setOnClickListener(new View.OnClickListener() {
