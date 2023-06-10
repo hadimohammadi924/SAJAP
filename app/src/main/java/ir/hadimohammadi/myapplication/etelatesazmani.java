@@ -6,6 +6,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.android.volley.Cache;
@@ -18,36 +19,49 @@ import com.android.volley.toolbox.BasicNetwork;
 import com.android.volley.toolbox.DiskBasedCache;
 import com.android.volley.toolbox.HurlStack;
 import com.android.volley.toolbox.StringRequest;
+import com.bumptech.glide.Glide;
 
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import de.hdodenhof.circleimageview.CircleImageView;
+
 public class etelatesazmani extends AppCompatActivity {
     SharedPreferences sp;
+    TextView personall;
+    CircleImageView profile_imagee;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_etelatesazmani);
         sp = getApplicationContext().getSharedPreferences("SAJAP", Context.MODE_PRIVATE);
-  //      Toast.makeText(this, sp.getString("Users_IDD",""), Toast.LENGTH_SHORT).show();
-  //    Toast.makeText(this, sp.getString("post",""), Toast.LENGTH_SHORT).show();
-  //    Toast.makeText(this, sp.getString("Users_ID",""), Toast.LENGTH_SHORT).show();
-       // sdata(Integer.valueOf(sp.getString("Users_ID","")));
+        personall = findViewById(R.id.personall);
+        profile_imagee = findViewById(R.id.profile_imagee);
 
-        sdata( );
+    Glide
+            .with(etelatesazmani.this)
+            .load(sp.getString("image", ""))
+            .centerCrop()
 
+            .into(profile_imagee);
+
+   personall.setText(sp.getString("Users_Name", "") + " " + sp.getString("Users_FName", ""));
+
+
+        sdata();
 
 
     }
 
-    public void sdata( ){
+    public void sdata() {
         RequestQueue requestQueue;
         Cache cache = new DiskBasedCache(getCacheDir(), 1024 * 1024); // 1MB cap
         Network network = new BasicNetwork(new HurlStack());
         requestQueue = new RequestQueue(cache, network);
         requestQueue.start();
-        String url = "https://pgtab.ir/Home/SDATA?d_personalcode=" + sp.getString("Users_ID","");
+        String url = "https://pgtab.ir/Home/SDATA?d_personalcode=" + sp.getString("Users_ID", "");
         StringRequest stringRequest = new StringRequest(Request.Method.GET, url,
                 new com.android.volley.Response.Listener<String>() {
                     @Override
@@ -71,5 +85,10 @@ public class etelatesazmani extends AppCompatActivity {
     }
 
 
+    public void onBackPressed() {
+        finishAffinity();
+        startActivity(new Intent(etelatesazmani.this, MainActivity.class));
+    }
 
-    };
+
+};

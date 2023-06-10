@@ -36,7 +36,7 @@ public class MainActivitychat extends AppCompatActivity {
     private EditText mEditText;
     private Button mButton;
     private String apiUrl = "https://api.openai.com/v1/completions";
-    private String accessToken = "sk-gHlvnkENgI06LGfI2vT3BlbkFJlXKoEF5Ivnm5O1Swk9MN";
+    private String accessToken = "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";
     private List < Message > mMessages;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -87,10 +87,10 @@ public class MainActivitychat extends AppCompatActivity {
           //  requestBody.put("prompt", "The following is a conversation with an AI assistant. The assistant is helpful, creative, clever, and very friendly.\\n\\nHuman: Hello, who are you?\\nAI: I am an AI created by OpenAI. How can I help you today?\\nHuman: I'd like to cancel my subscription.\\nAI:");
             requestBody.put("prompt", text);
             requestBody.put("max_tokens", 600);
-            requestBody.put("temperature", 0.9);
+            requestBody.put("temperature", 0.5);
             requestBody.put("top_p", 1);
-            requestBody.put("frequency_penalty", 0.0);
-            requestBody.put("presence_penalty", 0.6);
+            requestBody.put("frequency_penalty", 0.5);
+            requestBody.put("presence_penalty", 0.0);
 
 
         } catch (JSONException e) {
