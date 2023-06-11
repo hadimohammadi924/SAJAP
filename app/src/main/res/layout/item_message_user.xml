@@ -6,6 +6,7 @@
     android:padding="5dp">
 
     <TextView
+        android:fontFamily="@font/iran"
         android:id="@+id/text_message_user"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
