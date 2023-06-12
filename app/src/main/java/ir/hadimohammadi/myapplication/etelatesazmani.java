@@ -30,7 +30,8 @@ import de.hdodenhof.circleimageview.CircleImageView;
 
 public class etelatesazmani extends AppCompatActivity {
     SharedPreferences sp;
-    TextView personall,codemelli,codemellii,shenasname,shenasnamee,tell,telll,mobile,mobilee,madrakk,madrak,reshtetahsili,reshtetahsilii;
+    TextView personall,codemelli,codemellii,shenasname,shenasnamee,tell,telll,mobile,mobilee,madrakk,madrak,reshtetahsili,reshtetahsilii,mahalesodorr,mahalesodor,
+            saletavalodee,saletavalode,address,addresss,dadnamee,dadname,shomarehesab,shomarehesabb,shaba,shabaa;
     CircleImageView profile_imagee;
 
 
@@ -53,6 +54,18 @@ public class etelatesazmani extends AppCompatActivity {
         madrak = findViewById(R.id.madrak);
         reshtetahsili = findViewById(R.id.reshtetahsili);
         reshtetahsilii = findViewById(R.id.reshtetahsilii);
+        mahalesodorr = findViewById(R.id.mahalesodorr);
+        mahalesodor = findViewById(R.id.mahalesodor);
+        saletavalode = findViewById(R.id.saletavalode);
+        saletavalodee = findViewById(R.id.saletavalodee);
+        addresss = findViewById(R.id.addresss);
+        address = findViewById(R.id.address);
+        dadnamee = findViewById(R.id.dadnamee);
+        dadname = findViewById(R.id.dadname);
+        shomarehesab = findViewById(R.id.shomarehesab);
+        shomarehesabb = findViewById(R.id.shomarehesabb);
+        shabaa = findViewById(R.id.shabaa);
+        shaba = findViewById(R.id.shaba);
 
     Glide
             .with(etelatesazmani.this)
@@ -99,6 +112,12 @@ public class etelatesazmani extends AppCompatActivity {
                             mobilee.setText(respo.getString("mobile"));
                             madrakk.setText(respo.getString("madrak"));
                             reshtetahsilii.setText(respo.getString("reshtetahsili"));
+                            mahalesodorr.setText(respo.getString("mahalesodor"));
+                            addresss.setText(respo.getString("address"));
+                            dadnamee.setText(respo.getString("dadname"));
+                            shomarehesabb.setText(respo.getString("shomarehesab"));
+                            shabaa.setText(respo.getString("shaba"));
+                            saletavalodee.setText(respo.getString("saletavalode")+"/"+respo.getString("mahetavalode")+"/"+respo.getString("rozetavalod"));
 
 
 
