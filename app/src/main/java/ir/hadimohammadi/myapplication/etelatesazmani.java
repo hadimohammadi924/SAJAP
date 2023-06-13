@@ -31,7 +31,7 @@ import de.hdodenhof.circleimageview.CircleImageView;
 public class etelatesazmani extends AppCompatActivity {
     SharedPreferences sp;
     TextView personall,codemelli,codemellii,shenasname,shenasnamee,tell,telll,mobile,mobilee,madrakk,madrak,reshtetahsili,reshtetahsilii,mahalesodorr,mahalesodor,
-            saletavalodee,saletavalode,address,addresss,dadnamee,dadname,shomarehesab,shomarehesabb,shaba,shabaa;
+            saletavalodee,saletavalode,address,addresss,dadnamee,dadname,shomarehesab,shomarehesabb,shaba,shabaa,shobee,shobe;
     CircleImageView profile_imagee;
 
 
@@ -66,6 +66,8 @@ public class etelatesazmani extends AppCompatActivity {
         shomarehesabb = findViewById(R.id.shomarehesabb);
         shabaa = findViewById(R.id.shabaa);
         shaba = findViewById(R.id.shaba);
+        shobe = findViewById(R.id.shobe);
+        shobee = findViewById(R.id.shobee);
 
     Glide
             .with(etelatesazmani.this)
@@ -117,6 +119,7 @@ public class etelatesazmani extends AppCompatActivity {
                             dadnamee.setText(respo.getString("dadname"));
                             shomarehesabb.setText(respo.getString("shomarehesab"));
                             shabaa.setText(respo.getString("shaba"));
+                            shobee.setText(respo.getString("shobe"));
                             saletavalodee.setText(respo.getString("saletavalode")+"/"+respo.getString("mahetavalode")+"/"+respo.getString("rozetavalod"));
 
 

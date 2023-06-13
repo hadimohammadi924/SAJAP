@@ -201,7 +201,6 @@
                     android:textSize="23dp"
                     app:fontFamily="@font/iran"></TextView>
             </LinearLayout>
-
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -230,7 +229,6 @@
                     android:textSize="23dp"
                     app:fontFamily="@font/iran"></TextView>
             </LinearLayout>
-
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -259,7 +257,6 @@
                     android:textSize="23dp"
                     app:fontFamily="@font/iran"></TextView>
             </LinearLayout>
-
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -289,15 +286,12 @@
                     android:textSize="15dp"
                     app:fontFamily="@font/iran"></TextView>
             </LinearLayout>
-
-
             <View
                 android:layout_width="300dp"
                 android:layout_height="2dp"
                 android:layout_gravity="center"
                 android:layout_margin="10dp"
                 android:background="@color/b10" />
-
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -326,7 +320,6 @@
                     android:textSize="23dp"
                     app:fontFamily="@font/iran"></TextView>
             </LinearLayout>
-
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -409,6 +402,40 @@
 
                 <TextView
                     android:id="@+id/shabaa"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="00dp"
+
+                    android:textColor="@color/b11"
+                    android:textSize="23dp"
+                    app:fontFamily="@font/iran"></TextView>
+            </LinearLayout>
+            <View
+                android:layout_width="300dp"
+                android:layout_height="2dp"
+                android:layout_gravity="center"
+                android:layout_margin="10dp"
+                android:background="@color/b10" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/shobe"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="00dp"
+                    android:drawableRight="@drawable/baseline_attach_money_24"
+                    android:text="محل فعالیت: "
+                    android:textColor="@color/b10"
+                    android:textSize="20dp"
+                    app:fontFamily="@font/iran"></TextView>
+
+                <TextView
+                    android:id="@+id/shobee"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_margin="00dp"
